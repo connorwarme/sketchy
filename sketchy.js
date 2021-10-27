@@ -43,6 +43,10 @@ container.addEventListener("mousemove", (e) => {
 
 function colorBlack(e) {
     e.target.classList.add('active');
+    const active = Array.from(document.querySelectorAll('div.active'));
+    for (i=0; i<active.length; i++) {
+        active[i].style.cssText = "background-color: black;";
+    }; 
 };
 
 let restart = document.querySelector('button.reset');
@@ -52,11 +56,8 @@ restart.addEventListener('click', e => {
     console.log(e);
 });
 
-let rainbow = document.querySelector('button.rainbow');
-rainbow.addEventListener('click', e => {
-    const active = Array.from(document.querySelectorAll('div.active'));
-    console.log(active);
-    container.appendChild('.active');
-    active.style.cssText = "background-color: blue;";
+//let rainbow = document.querySelector('button.rainbow');
+//rainbow.addEventListener('click', e => {
+
     
-});
+//});
