@@ -37,9 +37,10 @@ const group = document.getElementsByClassName('box');
 const divs = Array.from(group);
 console.log(divs);
 
-container.addEventListener("mousemove", (e) => {
-    colorBlack(e)
+container.addEventListener("mouseover", (e) => {
+    colorBlack(e);
 });
+
 
 function colorBlack(e) {
     e.target.classList.add('active');
@@ -56,8 +57,39 @@ restart.addEventListener('click', e => {
     console.log(e);
 });
 
-//let rainbow = document.querySelector('button.rainbow');
-//rainbow.addEventListener('click', e => {
+let rainbow = document.querySelector('button.rainbow');
+rainbow.addEventListener('click', e => {
+    container.addEventListener("mouseover", (e) => {
+        colorRainbow(e)
+    });
+});
 
-    
+function colorRainbow(e) {
+    e.target.classList.add('rainbow');
+    function generateColor() {
+        let x = Math.floor(Math.random() * 255);
+        let y = Math.floor(Math.random() * 255);
+        let z = Math.floor(Math.random() * 255);
+        return `rgb(${x}, ${y}, ${z})`;
+    }
+    const colorful = Array.from(document.querySelectorAll('div.rainbow'));
+    for (i=0; i<colorful.length; i++) {
+        colorful[i].style.cssText = `background-color: ${generateColor()}`;
+    }
+}
+
+//let custom = document.querySelector('button.faded');
+//custom.addEventListener('click', e => {
+//    container.addEventListener('mouseover', e => {
+//        colorFade(e);
+//    });
 //});
+
+//function colorFade(e) {
+//   e.target.classList.add('faded');
+//    const faded = Array.from(document.querySelectorAll('div.faded'));
+//    for (i=0; faded.length; i++) {
+//        faded[i].style["background-color"] = "black";
+//       faded[i].style["opacity"] = 0.1;
+//    }
+//}
