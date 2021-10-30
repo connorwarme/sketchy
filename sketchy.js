@@ -38,17 +38,8 @@ const divs = Array.from(group);
 console.log(divs);
 
 container.addEventListener("mouseover", (e) => {
-    colorBlack(e);
+    e.target.style.backgroundColor = "black";
 });
-
-
-function colorBlack(e) {
-    e.target.classList.add('active');
-    const active = Array.from(document.querySelectorAll('div.active'));
-    for (i=0; i<active.length; i++) {
-        active[i].style.cssText = "background-color: black;";
-    }; 
-};
 
 let restart = document.querySelector('button.reset');
 restart.addEventListener('click', e => {
@@ -59,31 +50,27 @@ restart.addEventListener('click', e => {
 
 let rainbow = document.querySelector('button.rainbow');
 rainbow.addEventListener('click', e => {
-    container.addEventListener("mouseover", (e) => {
-        colorRainbow(e)
+    container.addEventListener("mouseover", e => {
+        e.target.style.backgroundColor = `${generateColor()}`;
     });
 });
 
-function colorRainbow(e) {
-    e.target.classList.add('rainbow');
-    function generateColor() {
-        let x = Math.floor(Math.random() * 255);
-        let y = Math.floor(Math.random() * 255);
-        let z = Math.floor(Math.random() * 255);
-        return `rgb(${x}, ${y}, ${z})`;
-    }
-    const colorful = Array.from(document.querySelectorAll('div.rainbow'));
-    for (i=0; i<colorful.length; i++) {
-        colorful[i].style.cssText = `background-color: ${generateColor()}`;
-    }
+function generateColor() {
+    let x = Math.floor(Math.random() * 255);
+    let y = Math.floor(Math.random() * 255);
+    let z = Math.floor(Math.random() * 255);
+    return `rgb(${x}, ${y}, ${z})`;
 }
 
-//let custom = document.querySelector('button.faded');
-//custom.addEventListener('click', e => {
-//    container.addEventListener('mouseover', e => {
-//        colorFade(e);
-//    });
-//});
+let custom = document.querySelector('button.faded');
+custom.addEventListener('click', e => {
+    for (i=0; i<divs.length; i++) {
+        divs[i].addEventListener('mouseleave', e => {
+        e.target.style.backgroundColor = `black;`;
+        e.target.value++;
+        e.target.style.opacity = `0.1 * ${e.target.value}`
+    });
+}});
 
 //function colorFade(e) {
 //   e.target.classList.add('faded');
