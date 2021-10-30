@@ -36,6 +36,9 @@ makeGrid(gridSize);
 const group = document.getElementsByClassName('box');
 const divs = Array.from(group);
 console.log(divs);
+for (i=0; i<divs.length; i++) {
+    divs[i].value = 0;
+}
 
 container.addEventListener("mouseover", (e) => {
     e.target.style.backgroundColor = "black";
@@ -67,8 +70,9 @@ custom.addEventListener('click', e => {
     for (i=0; i<divs.length; i++) {
         divs[i].addEventListener('mouseleave', e => {
         e.target.style.backgroundColor = `black;`;
-        e.target.value++;
-        e.target.style.opacity = `0.1 * ${e.target.value}`
+        ++e.target.value;
+        const opaqueValue = (e.target.value * 0.1);
+        e.target.style.opacity = `${opaqueValue}`;
     });
 }});
 
