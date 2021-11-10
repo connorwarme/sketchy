@@ -102,31 +102,31 @@ custom.addEventListener('click', generalFade);
 
 
 // styling via JS
-restart.style.cssText = `height: 50px; width: 200px;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;`
-slider.style.cssText = `width: 200px;
-    margin-top: 10px;
-    margin-bottom: 10px;`
-black.style.cssText = `height: 50px; width: 200px;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;`
-white.style.cssText = `height: 50px; width: 200px;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;`
-rainbow.style.cssText = `height: 50px; width: 200px;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;`
-custom.style.cssText = `height: 50px; width: 200px;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;`
-const totality = document.querySelector('div.total');
+// restart.style.cssText = `height: 50px; width: 200px;
+//     border: 2px solid black;
+//     border-radius: 10px;
+//     text-align: center;`
+// slider.style.cssText = `width: 200px;
+//     margin-top: 10px;
+//     margin-bottom: 10px;`
+// black.style.cssText = `height: 50px; width: 200px;
+//     border: 2px solid black;
+//     border-radius: 10px;
+//     text-align: center;`
+// white.style.cssText = `height: 50px; width: 200px;
+//     border: 2px solid black;
+//     border-radius: 10px;
+//     text-align: center;`
+// rainbow.style.cssText = `height: 50px; width: 200px;
+//     border: 2px solid black;
+//     border-radius: 10px;
+//     text-align: center;`
+// custom.style.cssText = `height: 50px; width: 200px;
+//     border: 2px solid black;
+//     border-radius: 10px;
+//     text-align: center;`
+// const totality = document.querySelector('div.total');
 
-const buttons = document.querySelector('div.options');
+// const buttons = document.querySelector('div.options');
 
-container.style.cssText = `border: 2px solid black;`
+// container.style.cssText = `border: 2px solid black;`
