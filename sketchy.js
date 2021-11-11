@@ -102,31 +102,49 @@ custom.addEventListener('click', generalFade);
 
 
 // styling via JS
-// restart.style.cssText = `height: 50px; width: 200px;
-//     border: 2px solid black;
-//     border-radius: 10px;
-//     text-align: center;`
-// slider.style.cssText = `width: 200px;
-//     margin-top: 10px;
-//     margin-bottom: 10px;`
-// black.style.cssText = `height: 50px; width: 200px;
-//     border: 2px solid black;
-//     border-radius: 10px;
-//     text-align: center;`
-// white.style.cssText = `height: 50px; width: 200px;
-//     border: 2px solid black;
-//     border-radius: 10px;
-//     text-align: center;`
-// rainbow.style.cssText = `height: 50px; width: 200px;
-//     border: 2px solid black;
-//     border-radius: 10px;
-//     text-align: center;`
-// custom.style.cssText = `height: 50px; width: 200px;
-//     border: 2px solid black;
-//     border-radius: 10px;
-//     text-align: center;`
-// const totality = document.querySelector('div.total');
+restart.style.cssText = `height: 50px; width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 22px;`
+slider.style.cssText = `width: 200px;
+    margin-top: 20px;
+    margin-bottom: 15px;`
+black.style.cssText = `height: 50px; width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;`
+white.style.cssText = `height: 50px; width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;`
+rainbow.style.cssText = `height: 50px; width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;`
+custom.style.cssText = `height: 50px; width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 22px;`
+const totality = document.querySelector('div.total');
+const buttons = document.querySelector('div.options');
+totality.style.cssText = `display: flex;
+    justify-content: space-evenly;
+    align-items: center;`
+const outline = document.querySelector('div.outerline');
+outline.style.cssText = `border: 2px solid black;
+margin-top: 2%;`
+//  container.style.cssText =
 
-// const buttons = document.querySelector('div.options');
-
-// container.style.cssText = `border: 2px solid black;`
+const gridDisplay = document.querySelector('div.textcontainer');
+gridDisplay.style.cssText = `text-align: left;
+    font-weight: 600;
+    padding-left: 18px;
+    margin-bottom: 10px;`
