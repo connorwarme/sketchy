@@ -1,7 +1,7 @@
 const container = document.querySelector('div.container');
 const slider = document.getElementById('gridRange');
 const output = document.getElementById('output');
-
+slider.value = 16;
 slider.oninput = function () {
     output.textContent = `Grid size: ${this.value} x ${this.value}`;
     console.log(this.value);
@@ -141,10 +141,15 @@ totality.style.cssText = `display: flex;
 const outline = document.querySelector('div.outerline');
 outline.style.cssText = `border: 2px solid black;
 margin-top: 2%;`
-//  container.style.cssText =
-
-const gridDisplay = document.querySelector('div.textcontainer');
-gridDisplay.style.cssText = `text-align: left;
+const gridText = document.querySelector('div.textcontainer');
+gridText.style.cssText = `text-align: left;
     font-weight: 600;
     padding-left: 18px;
     margin-bottom: 10px;`
+const title = document.querySelector('div.title');
+title.style.cssText = `font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;`
+const describe = document.querySelector('div.description');
+describe.style.cssText = `margin-bottom: 10px;`
